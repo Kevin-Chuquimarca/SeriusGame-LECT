@@ -1332,7 +1332,7 @@ GameObject:
   - component: {fileID: 981786975}
   m_Layer: 0
   m_Name: Garbage
-  m_TagString: Untagged
+  m_TagString: Garbage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1419,10 +1419,15 @@ MonoBehaviour:
   rg2d: {fileID: 981786976}
   boxCldr2d: {fileID: 981786977}
   posI: {x: 0, y: -3, z: 0}
-  pos0: {x: 0, y: -3, z: 0}
-  pos1: {x: 0, y: 0, z: 0}
-  speed: {x: 0, y: 0, z: 0}
-  auxTime: 0
+  txtSocore: {fileID: 1676196656}
+  score: 0
+  sprites:
+  - {fileID: 21300000, guid: 1aeb174381be4ef44838c2172d4112dc, type: 3}
+  - {fileID: 21300000, guid: 3cdc1627cf9feb74190ba41b03296928, type: 3}
+  - {fileID: 21300000, guid: 1c44c99cbe6a0e545863494e827e7f82, type: 3}
+  - {fileID: 21300000, guid: 2368feffb7739124f8bc6cdf86076bee, type: 3}
+  - {fileID: 21300000, guid: 7aab751c539bebb4cb4ecf988b7a1cb5, type: 3}
+  random: 0
 --- !u!50 &981786976
 Rigidbody2D:
   serializedVersion: 4
@@ -1521,7 +1526,7 @@ GameObject:
   - component: {fileID: 1137295146}
   m_Layer: 0
   m_Name: BlueContainer
-  m_TagString: Untagged
+  m_TagString: BlueContainer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1565,7 +1570,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 40097189a5b94b74fb8c75fee394ea04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1728,7 +1733,7 @@ GameObject:
   - component: {fileID: 1155306771}
   m_Layer: 0
   m_Name: YellowContainer
-  m_TagString: Untagged
+  m_TagString: YellowContainer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1772,7 +1777,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6022dc50d42dd7d40b8b0287a1fdebe7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1951,7 +1956,7 @@ GameObject:
   - component: {fileID: 1255886130}
   m_Layer: 0
   m_Name: RedContainer
-  m_TagString: Untagged
+  m_TagString: RedContainer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1995,7 +2000,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c88335aaac5c33e429dd006b98ace8cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2640,7 +2645,7 @@ GameObject:
   - component: {fileID: 1831470775}
   m_Layer: 0
   m_Name: GreenContainer
-  m_TagString: Untagged
+  m_TagString: GreenContainer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2684,7 +2689,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 76c99e652d76bb745afa188166c4d967, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
