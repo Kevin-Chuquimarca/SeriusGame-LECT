@@ -8,10 +8,12 @@ public class MoveGarbage : MonoBehaviour
     public Transform trans;
     public Rigidbody2D rg2d;
     public BoxCollider2D boxCldr2d;
-    public bool holdingBall = true;
-    public float garbageForce = 250f;
-    public float distanceGarbage = 2f;
-    public Vector3 pos0 = new Vector3(0,-3,0);
+    public Vector3 posI = new Vector3(0,-3,0);
+    public Vector3 pos0 = new Vector3(0,0,0);
+    public Vector3 pos1 = new Vector3(0,0,0);
+    // public Vector3 posF = new Vector3(0,0,0);
+    public Vector3 speed = new Vector3(0,0,0);
+    public float auxTime = 0;
 
     void Start()
     {
@@ -21,20 +23,38 @@ public class MoveGarbage : MonoBehaviour
 
     void Update()
     {
+        
+        // OnMouseOver();
+        
+    }
+
+    private void OnMouseOver() {
         Vector3 mousePos2D = mousePositionScale2D();
-        if(Input.GetMouseButton(0) && mousePos2D.y<2f)
+        if(Input.GetMouseButton(0) && mousePos2D.y<4f)
         {
+            if(auxTime==0){
+                pos0 = mousePositionScale2D();
+            }
+            rg2d.gravityScale = 0f;
+            auxTime += Time.deltaTime;
             trans.position = mousePos2D;
         }
         else
         {
-            trans.position = pos0;
+            rg2d.gravityScale = 1f;
+            // pos1 = mousePositionScale2D();
+            // speed = getSpeedMouse(pos1, pos0, auxTime);
+            auxTime = 0;
         }
     }
 
     private Vector3 mousePositionScale2D(){
         float scale = 1/52f;
         return new Vector3(Input.mousePosition.x*scale-8.75f, Input.mousePosition.y*scale-4.75f, 0);
+    }
+
+    private Vector3 getSpeedMouse(Vector3 mousePosF, Vector3 mousePosI, float time){
+        return new Vector3(mousePosF.x-mousePosI.x,mousePosF.y-mousePosI.y,mousePosF.z-mousePosI.z)*(1/time);
     }
 }
 
