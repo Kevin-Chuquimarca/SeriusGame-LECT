@@ -8,10 +8,11 @@ public class Garbage : MonoBehaviour
     public GameObject garbage;
     public Transform trans;
     public Rigidbody2D rg2d;
-    public Vector3 posI;
+    public Vector3 posI;    
     public TextMeshProUGUI txtSocore;
     public TextMeshProUGUI txtTime;
     public float gameTime;
+    public float countTime;
     public Sprite[] sprites;
     public int score;
     public PolygonCollider2D[] polyColliders2d;
@@ -21,6 +22,7 @@ public class Garbage : MonoBehaviour
     void Start()
     {
         gameTime = 59;
+        countTime = 0;
         rg2d.gravityScale = 0f;
         score = 0;
         posI = new Vector3(0,-3,0);
@@ -31,8 +33,6 @@ public class Garbage : MonoBehaviour
 
     void Update()
     {
-        // gameTime-=1;
-        //txtTime.text = "Time: " + gameTime;
         txtSocore.text = "Score: " + score;
         Vector3 mousePos2D = mousePositionScale2D();
         if(Input.GetMouseButton(0))
@@ -46,6 +46,7 @@ public class Garbage : MonoBehaviour
         }
         controlPositionGarvage();
         onOffColliders();
+        controGameTime();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -113,6 +114,17 @@ public class Garbage : MonoBehaviour
             {
                 polyColliders2d[i].enabled=false;
             }
+        }
+    }
+
+    private void controGameTime()
+    {
+        countTime+=Time.deltaTime;
+        if(countTime>=1 && gameTime>=0)
+        {
+            gameTime-=countTime;
+            txtTime.text = "Time: " + ((int)gameTime) + " seg";
+            countTime=0;
         }
     }
 }
