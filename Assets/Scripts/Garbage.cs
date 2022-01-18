@@ -32,7 +32,7 @@ public class Garbage : MonoBehaviour
     void Update()
     {
         // gameTime-=1;
-        txtTime.text = "Time: " + gameTime;
+        //txtTime.text = "Time: " + gameTime;
         txtSocore.text = "Score: " + score;
         Vector3 mousePos2D = mousePositionScale2D();
         if(Input.GetMouseButton(0))
