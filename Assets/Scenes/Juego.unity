@@ -356,13 +356,14 @@ GameObject:
   - component: {fileID: 111907644}
   - component: {fileID: 111907646}
   - component: {fileID: 111907645}
+  - component: {fileID: 111907647}
   m_Layer: 5
   m_Name: FeedBackPanel4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &111907644
 RectTransform:
   m_ObjectHideFlags: 0
@@ -425,6 +426,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 111907643}
   m_CullTransparentMesh: 1
+--- !u!114 &111907647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111907643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51b37936711ddd64ebf35d0ae7c21734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &138104616
 GameObject:
   m_ObjectHideFlags: 0
@@ -6033,7 +6046,6 @@ GameObject:
   - component: {fileID: 1929915799}
   - component: {fileID: 1929915798}
   - component: {fileID: 1929915797}
-  - component: {fileID: 1929915800}
   m_Layer: 5
   m_Name: ButtonFinish
   m_TagString: Untagged
@@ -6104,10 +6116,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 111907643}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 111907647}
+        m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
+        m_MethodName: EndGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6154,18 +6166,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929915795}
   m_CullTransparentMesh: 1
---- !u!114 &1929915800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929915795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51b37936711ddd64ebf35d0ae7c21734, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2081981528
 GameObject:
   m_ObjectHideFlags: 0
