@@ -1325,7 +1325,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 654596789}
-        m_TargetAssemblyTypeName: pause, Assembly-CSharp
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
         m_MethodName: Reanudar
         m_Mode: 1
         m_Arguments:
@@ -6022,7 +6022,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 654596789}
-        m_TargetAssemblyTypeName: pause, Assembly-CSharp
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
         m_MethodName: Pausa
         m_Mode: 1
         m_Arguments:
