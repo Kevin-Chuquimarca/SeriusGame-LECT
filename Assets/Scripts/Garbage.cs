@@ -6,7 +6,7 @@ using TMPro;
 public class Garbage : MonoBehaviour
 {
     public GameObject garbage;
-    public Transform trans;
+    public Transform transforms;
     public Rigidbody2D rg2d;
     public Vector3 posI;    
     public TextMeshProUGUI txtSocore;
@@ -34,11 +34,9 @@ public class Garbage : MonoBehaviour
     void Update()
     {
         txtSocore.text = "Score: " + score;
-        Vector3 mousePos2D = mousePositionScale2D();
         if(Input.GetMouseButton(0))
         {
             rg2d.gravityScale = 0f;
-            trans.position = mousePos2D;
         }
         else
         {
@@ -46,7 +44,15 @@ public class Garbage : MonoBehaviour
         }
         controlPositionGarvage();
         onOffColliders();
-        controGameTime();
+        controlGameTime();
+    }
+
+    private void OnMouseDrag() {
+        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+        Vector3 objPosition = Camera.main.ScreenToViewportPoint(mousePosition);
+        objPosition.x = objPosition.x*20-10f;
+        objPosition.y = objPosition.y*10-5f;
+        transforms.position = objPosition;  
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -77,25 +83,19 @@ public class Garbage : MonoBehaviour
         rand = Random.Range(0,sprites.Length);
         random = rand;
         GetComponent<SpriteRenderer>().sprite=sprites[rand];
-        trans.position = posI;
+        transforms.position = posI;
         isTopGarbage = false;
-    }
-
-    private Vector3 mousePositionScale2D()
-    {
-        float scale = 0.016f;
-        return new Vector3(Input.mousePosition.x*scale-9.75f, Input.mousePosition.y*scale-4.75f, 0);
     }
 
     public void controlPositionGarvage()
     {
-        if(trans.position.y>=3)
+        if(transforms.position.y>=3)
         {
             isTopGarbage = true;
         }
-        if(trans.position.y<-5)
+        if(transforms.position.y<-5)
         {
-            trans.position = posI;
+            transforms.position = posI;
         }
     }
 
@@ -117,7 +117,7 @@ public class Garbage : MonoBehaviour
         }
     }
 
-    private void controGameTime()
+    private void controlGameTime()
     {
         countTime+=Time.deltaTime;
         if(countTime>=1 && gameTime>=0)
