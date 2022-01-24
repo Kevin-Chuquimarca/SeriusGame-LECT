@@ -9,4 +9,14 @@ public class pause : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void Pausa ()
+    {
+        Time.timeScale = 0f;
+    }
+
+    public void Reanudar ()
+    {
+        Time.timeScale = 1f;
+    }
 }
