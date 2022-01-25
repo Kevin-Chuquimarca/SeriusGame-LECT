@@ -1803,9 +1803,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Recuerda que los contenedores de color rojo est\xE1n destinados exclusivamente
-    para desechos peligrosos como: pilas, bater\xEDas, aerosoles, residuos hospitalarios
-    infecciosos, entre otros."
+  m_text: "Recuerda que los contenedores de color amarillo est\xE1n destinados exclusivamente
+    para desechos pl\xE1sticos y de metal como: botellas, funas de basura, latas
+    de bebida, entre otros."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -1913,6 +1913,7 @@ RectTransform:
   m_Children:
   - {fileID: 1220306626}
   - {fileID: 555786945}
+  - {fileID: 1220478235}
   m_Father: {fileID: 654596788}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2137,7 +2138,6 @@ RectTransform:
   - {fileID: 1884599202}
   - {fileID: 2081981529}
   - {fileID: 111907644}
-  - {fileID: 1220478235}
   - {fileID: 1056131543}
   - {fileID: 905956688}
   m_Father: {fileID: 0}
@@ -2719,7 +2719,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 654596788}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -2899,6 +2899,7 @@ MonoBehaviour:
   - {fileID: 1137295146}
   random: 0
   isTopGarbage: 0
+  bestScore: 0
 --- !u!50 &981786976
 Rigidbody2D:
   serializedVersion: 4
@@ -3191,7 +3192,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 654596788}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -3213,7 +3214,7 @@ MonoBehaviour:
   panel: {fileID: 610056058}
   timeImage: {fileID: 1056131545}
   timeText: {fileID: 905956690}
-  duration: 45
+  duration: 10
   currentTime: 0
 --- !u!114 &1056131545
 MonoBehaviour:
@@ -3776,7 +3777,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 600, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1220306627
@@ -3826,8 +3827,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3893,7 +3894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1220478233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3914,10 +3915,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time: 59 seg'
+  m_text: '-'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
-  m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3998,16 +3999,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220478232}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3333334, y: 1.111111, z: 1}
   m_Children: []
-  m_Father: {fileID: 654596788}
-  m_RootOrder: 8
+  m_Father: {fileID: 610056059}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -475, y: 275}
+  m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1229175457
@@ -4501,9 +4502,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Recuerda que los contenedores de color rojo est\xE1n destinados exclusivamente
-    para desechos peligrosos como: pilas, bater\xEDas, aerosoles, residuos hospitalarios
-    infecciosos, entre otros."
+  m_text: "Recuerda que los contenedores de color verde est\xE1n destinados exclusivamente
+    para desechos de vidrio como:botellas de vidrio, vasos rotos, cristales rotos,
+    entre otros."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
@@ -4771,9 +4772,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Recuerda que los contenedores de color rojo est\xE1n destinados exclusivamente
-    para desechos peligrosos como: pilas, bater\xEDas, aerosoles, residuos hospitalarios
-    infecciosos, entre otros."
+  m_text: "Recuerda que los contenedores de color azul est\xE1n destinados exclusivamente
+    para desechos de papel o cart\xF3n como: cajas, peri\xF3dicos viejos, cajas de
+    pizza, entre otros."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}

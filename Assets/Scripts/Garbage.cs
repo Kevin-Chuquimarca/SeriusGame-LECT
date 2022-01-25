@@ -18,6 +18,7 @@ public class Garbage : MonoBehaviour
     public PolygonCollider2D[] polyColliders2d;
     public int random;
     public bool isTopGarbage;
+    public int bestScore;
 
     void Start()
     {
@@ -29,6 +30,7 @@ public class Garbage : MonoBehaviour
         random = Random.Range(0,sprites.Length);
         GetComponent<SpriteRenderer>().sprite=sprites[random];
         isTopGarbage = false;
+        bestScore = PlayerPrefs.GetInt("Highscore");
     }
 
     void Update()
@@ -44,7 +46,7 @@ public class Garbage : MonoBehaviour
         }
         controlPositionGarvage();
         onOffColliders();
-        controlGameTime();
+        controlHighScore();
     }
 
     private void OnMouseDrag() {
@@ -117,14 +119,11 @@ public class Garbage : MonoBehaviour
         }
     }
 
-    private void controlGameTime()
+    private void controlHighScore()
     {
-        countTime+=Time.deltaTime;
-        if(countTime>=1 && gameTime>=0)
+        if(score > bestScore)
         {
-            gameTime-=countTime;
-            txtTime.text = "Time: " + ((int)gameTime) + " seg";
-            countTime=0;
+            PlayerPrefs.SetInt("Highscore", score);
         }
     }
 }
