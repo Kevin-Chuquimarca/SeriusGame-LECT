@@ -20,6 +20,6 @@ public class ControlScore : MonoBehaviour
     public void ResetPref ()
     {
         PlayerPrefs.DeleteAll();
-        bestScoreText.text = "-";
+        bestScore = 0;
     }
 }
