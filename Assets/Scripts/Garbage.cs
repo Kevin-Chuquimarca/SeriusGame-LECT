@@ -61,19 +61,19 @@ public class Garbage : MonoBehaviour
     {
         if(collision.gameObject.tag=="YellowContainer")
         {
-            addScore(0,2,random);
+            addScore(0,8,random);
         }
         if(collision.gameObject.tag=="RedContainer")
         {
-            addScore(3,5,random);
+            addScore(9,14,random);
         }
         if(collision.gameObject.tag=="GreenContainer")
         {
-            addScore(6,8,random);
+            addScore(15,19,random);
         }
         if(collision.gameObject.tag=="BlueContainer")
         {
-            addScore(9,11,random);
+            addScore(20,26,random);
         }
     }
 
@@ -82,6 +82,10 @@ public class Garbage : MonoBehaviour
         if (rand>=a && rand<=b){
             score++;
         }
+        newGarbage(rand);
+    }
+
+    private void newGarbage(int rand){
         rand = Random.Range(0,sprites.Length);
         random = rand;
         GetComponent<SpriteRenderer>().sprite=sprites[rand];

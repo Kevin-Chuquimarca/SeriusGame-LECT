@@ -9,6 +9,10 @@ TagManager:
   - RedContainer
   - GreenContainer
   - Garbage
+  - YellowContainerObj
+  - RedContainerObj
+  - GreenContainerObj
+  - BlueContainerObj
   layers:
   - Default
   - TransparentFX
