@@ -2881,7 +2881,6 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: ea0b754ca70594d4aafde4363331a5ce, type: 3}
   - {fileID: 21300000, guid: 442b610366ca35d4e9edec707b84833e, type: 3}
-  - {fileID: 21300000, guid: 5847a93369c85994f8e0c9c856c41a0c, type: 3}
   - {fileID: 21300000, guid: 800c9e537064b024185b2fc2f9b68120, type: 3}
   - {fileID: 21300000, guid: 0c03cce291ac2b34f8d04bd1b72ecfc9, type: 3}
   - {fileID: 21300000, guid: eaea567f96722ed44b1f6aa7b1dbf1c5, type: 3}
@@ -3230,7 +3229,7 @@ MonoBehaviour:
   panel: {fileID: 610056058}
   timeImage: {fileID: 1056131545}
   timeText: {fileID: 905956690}
-  duration: 45
+  duration: 15
   currentTime: 0
 --- !u!114 &1056131545
 MonoBehaviour:
@@ -6176,8 +6175,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 111907647}
-        m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
-        m_MethodName: EndGame
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: NextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
