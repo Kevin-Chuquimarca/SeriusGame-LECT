@@ -2340,7 +2340,7 @@ MonoBehaviour:
   panel: {fileID: 981308705}
   timeImage: {fileID: 623753819}
   timeText: {fileID: 1186902651}
-  duration: 10
+  duration: 45
   currentTime: 0
 --- !u!114 &623753819
 MonoBehaviour:
