@@ -2749,7 +2749,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 30
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
@@ -2876,6 +2876,7 @@ MonoBehaviour:
   posI: {x: 0, y: -3, z: 0}
   txtSocore: {fileID: 1676196656}
   txtTime: {fileID: 1220478233}
+  endScore: {fileID: 1220478233}
   gameTime: 0
   countTime: 0
   sprites:
@@ -3326,7 +3327,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 840ec6b2571e6b94d9845c0ca62df1cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d45537033a251d478ed3432ff608883, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3904,7 +3905,7 @@ GameObject:
   - component: {fileID: 1220478234}
   - component: {fileID: 1220478233}
   m_Layer: 5
-  m_Name: GameTime
+  m_Name: TextFinalScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5336,11 +5337,11 @@ RectTransform:
   m_Father: {fileID: 654596788}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -405, y: -288}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 45, y: 20}
   m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1676196656
 MonoBehaviour:
   m_ObjectHideFlags: 0

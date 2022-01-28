@@ -12,15 +12,20 @@ public class DownGarbage : MonoBehaviour
     public PolygonCollider2D[] polyColliders;
     public int random;
     public int score;
-
+    public TextMeshProUGUI endScore;
     public float velX = 0.1f;
     public float movX;
     public float inputX;
     public TextMeshProUGUI txtSocore;
+    public int bestScore;
+    public int localScoreG1;
 
     void Start()
     {
+        Time.timeScale = 1f;
         score = 0;
+        localScoreG1 = PlayerPrefs.GetInt("LocalScoreG1");
+        bestScore = PlayerPrefs.GetInt("Highscore");
         transforms.position = new Vector3(0,5,0);
         rg2d.gravityScale=0.1f;
         random = Random.Range(0,sprites.Length);
@@ -35,6 +40,8 @@ public class DownGarbage : MonoBehaviour
     {
         txtSocore.text = "Score: " + score;
         controlPositionGarvage();
+        controlLocalScore();
+        showScore();
     }
 
     void FixedUpdate () {
@@ -83,6 +90,7 @@ public class DownGarbage : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite=sprites[rand];
         transforms.position = new Vector3(0,5,0);
     }
+
     public void controlPositionGarvage()
     {
         if(transforms.position.y<=-5)
@@ -90,5 +98,15 @@ public class DownGarbage : MonoBehaviour
             random = Random.Range(0,sprites.Length);
             newGarbage(random);
         }
+    }
+
+    private void controlLocalScore()
+    {
+        PlayerPrefs.SetInt("LocalScoreG2", score);
+    }
+
+    public void showScore ()
+    {
+        endScore.text = "Score: " + score + " pts";
     }
 }

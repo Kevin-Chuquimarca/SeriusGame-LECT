@@ -11,6 +11,7 @@ public class Garbage : MonoBehaviour
     public Vector3 posI;    
     public TextMeshProUGUI txtSocore;
     public TextMeshProUGUI txtTime;
+    public TextMeshProUGUI endScore;
     public float gameTime;
     public float countTime;
     public Sprite[] sprites;
@@ -22,6 +23,7 @@ public class Garbage : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1f;
         gameTime = 59;
         countTime = 0;
         rg2d.gravityScale = 0f;
@@ -30,7 +32,6 @@ public class Garbage : MonoBehaviour
         random = Random.Range(0,sprites.Length);
         GetComponent<SpriteRenderer>().sprite=sprites[random];
         isTopGarbage = false;
-        bestScore = PlayerPrefs.GetInt("Highscore");
     }
 
     void Update()
@@ -46,7 +47,8 @@ public class Garbage : MonoBehaviour
         }
         controlPositionGarvage();
         onOffColliders();
-        controlHighScore();
+        controlLocalScore();
+        showScore();
     }
 
     private void OnMouseDrag() {
@@ -123,12 +125,14 @@ public class Garbage : MonoBehaviour
         }
     }
 
-    private void controlHighScore()
+    private void controlLocalScore()
     {
-        if(score > bestScore)
-        {
-            PlayerPrefs.SetInt("Highscore", score);
-        }
+        PlayerPrefs.SetInt("LocalScoreG1", score);
+    }
+
+    public void showScore ()
+    {
+        endScore.text = "Score: " + score + " pts";
     }
 }
 

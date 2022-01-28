@@ -30,6 +30,7 @@ public class CountDown : MonoBehaviour
              
         }
         OpenPanel();
+        Time.timeScale = 0f;
     }
 
     void OpenPanel()
