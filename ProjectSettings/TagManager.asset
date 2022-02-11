@@ -13,6 +13,9 @@ TagManager:
   - RedContainerObj
   - GreenContainerObj
   - BlueContainerObj
+  - User
+  - Score
+  - test
   layers:
   - Default
   - TransparentFX

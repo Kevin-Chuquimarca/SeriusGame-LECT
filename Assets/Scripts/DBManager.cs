@@ -8,15 +8,8 @@ public class DBManager : MonoBehaviour
 {
     public InputField textName;
     public static string namePlayer;
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    public static int score1Player;
+    public static int score2Player;
 
     public void send(){
         namePlayer = textName.text;

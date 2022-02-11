@@ -3140,6 +3140,7 @@ MonoBehaviour:
   random: 0
   isTopGarbage: 0
   bestScore: 0
+  User: {fileID: 0}
 --- !u!50 &981786976
 Rigidbody2D:
   serializedVersion: 4
@@ -5617,7 +5618,7 @@ GameObject:
   - component: {fileID: 1676196656}
   m_Layer: 5
   m_Name: ScoreText
-  m_TagString: Untagged
+  m_TagString: test
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -42,6 +42,7 @@ public class DownGarbage : MonoBehaviour
         controlPositionGarvage();
         controlLocalScore();
         showScore();
+        DBManager.score2Player = score;
     }
 
     void FixedUpdate () {

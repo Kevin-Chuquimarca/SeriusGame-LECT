@@ -20,9 +20,11 @@ public class Garbage : MonoBehaviour
     public int random;
     public bool isTopGarbage;
     public int bestScore;
+    public GameObject User;
 
     void Start()
     {
+        User = GameObject.FindGameObjectWithTag("User");
         Time.timeScale = 1f;
         gameTime = 59;
         countTime = 0;
@@ -49,6 +51,7 @@ public class Garbage : MonoBehaviour
         onOffColliders();
         controlLocalScore();
         showScore();
+        DBManager.score1Player = score;
     }
 
     private void OnMouseDrag() {
