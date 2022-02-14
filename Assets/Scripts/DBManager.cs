@@ -10,7 +10,8 @@ public class DBManager : MonoBehaviour
     public static string namePlayer;
     public static int score1Player;
     public static int score2Player;
-
+    public static int countLaunchPlay1;
+    public static int countLaunchPlay2;
     public void send(){
         namePlayer = textName.text;
         sendPortPost();

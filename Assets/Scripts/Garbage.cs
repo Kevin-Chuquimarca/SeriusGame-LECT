@@ -64,6 +64,9 @@ public class Garbage : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag!="Desk"){
+            DBManager.countLaunchPlay1++;
+        }
         if(collision.gameObject.tag=="YellowContainer")
         {
             addScore(0,8,random);

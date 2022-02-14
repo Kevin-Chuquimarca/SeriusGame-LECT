@@ -16,6 +16,7 @@ TagManager:
   - User
   - Score
   - test
+  - Desk
   layers:
   - Default
   - TransparentFX

@@ -60,6 +60,7 @@ public class DownGarbage : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        DBManager.countLaunchPlay2++;
         if(collision.gameObject.tag=="YellowContainerObj")
         {
             addScore(0,8,random);
