@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class DownGarbage : MonoBehaviour
@@ -19,6 +20,7 @@ public class DownGarbage : MonoBehaviour
     public TextMeshProUGUI txtSocore;
     public int bestScore;
     public int localScoreG1;
+    public Text totalScore;
 
     void Start()
     {
@@ -34,6 +36,7 @@ public class DownGarbage : MonoBehaviour
         {
             polyColliders[i].enabled=true;
         }
+        DBManager.countLaunchPlay2=0;
     }
 
     void Update()
@@ -43,6 +46,7 @@ public class DownGarbage : MonoBehaviour
         controlLocalScore();
         showScore();
         DBManager.score2Player = score;
+        totalScore.text = (DBManager.score1Player + DBManager.score2Player).ToString();
     }
 
     void FixedUpdate () {

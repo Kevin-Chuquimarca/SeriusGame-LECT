@@ -27,7 +27,6 @@ public class CountDown : MonoBehaviour
             timeText.text = currentTime.ToString();
             yield return new WaitForSeconds(1f);
             currentTime--;
-             
         }
         OpenPanel();
         Time.timeScale = 0f;

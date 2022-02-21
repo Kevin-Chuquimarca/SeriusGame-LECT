@@ -3479,7 +3479,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25
+  m_Text: 0
 --- !u!222 &776617856
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5468,6 +5468,7 @@ MonoBehaviour:
   txtSocore: {fileID: 47887426}
   bestScore: 0
   localScoreG1: 0
+  totalScore: {fileID: 776617855}
 --- !u!60 &1296803060
 PolygonCollider2D:
   m_ObjectHideFlags: 0
